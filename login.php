@@ -2,6 +2,7 @@
 require_once(realpath(dirname(__FILE__)."/config/db.php"));
 require_once(realpath(dirname(__FILE__)."/config/session.php"));
 $username=trim($_REQUEST['username']);
+
 $passwd=md5(trim($_REQUEST['password']));
 $role_flag=trim($_REQUEST['flag']); //角色标识   s=student  t=teacher  m=manager
 
