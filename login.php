@@ -4,22 +4,22 @@ require_once(realpath(dirname(__FILE__)."/config/session.php"));
 $username=trim($_REQUEST['username']);
 $passwd=md5(trim($_REQUEST['password']));
 $role_flag=trim($_REQUEST['flag']); //角色标识   s=student  t=teacher  m=manager
-
+echo $role_flag;
 if ($role_flag=="s")
 {
-	echo "<script>window.location =\"student\corses.php\";</script>";
+	echo "<script>window.location =\"student/corses.php\";</script>";
 }
 else if($role_flag=="t")
 {
-	echo "<script>window.location =\"manager\tmain.php\";</script>";
+	echo "<script>window.location =\"manager/tmain.php\";</script>";
 }
 else if($role_flag=="m")
 {
-	echo "<script>window.location =\"manager\main.php\";</script>";
+	echo "<script>window.location =\"manager/main.php\";</script>";
 }
 else
 {
-	echo "<script>window.location =\"error.html\";</script>";
+	//echo "<script>window.location =\"error.html\";</script>";
 }
 $dbc=mysqli_connect($db_host,$db_user,$db_pwd,$db_name) or die("Error connection to Mysql Server");
 $sql="select * from users,role where username='".$username."' and passwd='".$passwd."' and users.role=role.id;";
