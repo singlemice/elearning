@@ -2,12 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<<<<<<< HEAD
 <link href="css/style.css" rel="stylesheet" type="text/css" />
-=======
-<link href="img/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="./views/js/common.js"></script>
->>>>>>> 2cdc4b5d6775c77b761b81b34175038ea1a339b5
 <title>登录</title>
 </head>
 <body>
@@ -17,7 +12,7 @@
       <div id="main">
         <div id="sideMain">
           <div id="loginFrame">
-            <form name="f" method="post" action="login.php">
+            <form name="f" method="post" action="../login.php">
               <ul>
                 <li>
                   <div class="f1">用户名</div>
@@ -31,19 +26,23 @@
                     <input type="password" class="text" name="password" maxlength="16" />
                   </div>
                 </li>
+                <li>
+                  <div class="f1">身　份</div>
+                  <div class="f2">
+                    <select name="flag"> 
+					  <option value="t" >教师</option>
+					  <option value="m" >管理员</option>
+					</select>
+                  </div>
+                </li>
               </ul>
               <div class="login">
                 <div class="checkbox">
                   <input type="checkbox" name="ispersis" id="ispersis" value="1" />
                   记住我</div>
-<<<<<<< HEAD
-                <input type="image" src="images/btn_login.gif" width="88" height="39" />
+                <input type="image" src="../images/btn_login.gif" width="88" height="39" />
               </div>
-              <input type="hidden" id="flag" name="flag" value="s" />
-=======
-                <input type="image" src="img/btn_login.gif" width="88" height="39" />
-              </div>
->>>>>>> 2cdc4b5d6775c77b761b81b34175038ea1a339b5
+            
             </form>
             <script>focusEle('user');</script> 
           </div>
