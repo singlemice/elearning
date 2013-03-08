@@ -5,7 +5,7 @@
 <link href="css/main.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body style="" >
+<body>
 <div class="container" >
   <form name="f" method="post" action="process_post.php" >
   <ul>
@@ -19,9 +19,7 @@
 					  <option value="1" >必修课</option>
 					  <option value="2" >选修课</option>
 					</select></div></li>
-  <li><div class="label" >课程代码：</div><div class="input" ><input type="text" width="100px" maxlength="240px" /></div></li><link href="../css/main.css" rel="stylesheet" media="screen" type="text/css" />
-
-<link href="../css/main.css" rel="stylesheet" media="screen" type="text/css" />
+  <li><div class="label" >课程代码：</div><div class="input" ><input type="text" width="100px" maxlength="240px" /></div></li>
 
 
   <li><div class="label" >学时：</div><div class="input" ><input type="text" width="100px" maxlength="240px" /></div></li>
@@ -33,7 +31,22 @@
 <li><div class="label" ><input type="submit" value="提交" /></div><div class="input" ><input type="reset" value="重置" /></div></li>
 
   </ul>
+<input type="hidden" value="post_course_info" />
   </form>
+
+
+ <form name="f" method="post" action="process_post.php" >
+  <ul>
+  <li><div class="label" >班级：</div><div class="input" ><input type="text" width="100px" maxlength="240px" /></div></li>
+  
+  <li><div class="label" >年度：</div><div class="input" ><input type="text" width="100px" maxlength="240px" /></div></li>
+  
+<li><div class="label" ><input type="submit" value="提交" /></div><div class="input" ><input type="reset" value="重置" /></div></li>
+
+  </ul>
+   <input type="hidden" value="post_grades" />
+  </form>
+
 </div>
 
 
