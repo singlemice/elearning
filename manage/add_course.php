@@ -68,18 +68,18 @@ $action=$_REQUEST['flag'];
   <form name="f_course" method="post" action="process_post.php" onsubmit="return checkf_course();" >
   <ul>
   <li><div class="label" >课程名：</div><div class="input" ><input name="course" type="text" width="100px" maxlength="240px" /></div></li>
-  <li><div class="label" >班级：</div><div class="input" ><select name="class" > 
+  <li><div class="label" >班级：</div><div class="input" ><select name="classname" > 
   <?php
     $cdb=new ClassDataBase();
     $sql='select id,gradename,year from grades;';
     $results=$cdb->QuerySQL($sql);
     foreach ($results as $key ) {
-      echo "<option value='".$key['id']."' >".$key['year'].$key['gradename']."</option>";
+      echo '<option value="'.$key['id'].'" >'.$key['year'].$key['gradename']."</option>";
     }
   ?>
 					</select></div></li>
   <li><div class="label" >课程属性：</div><div class="input" >
-  <select name="corse_pro" > 
+  <select name="course_pro" > 
 					  <option value="1" >必修课</option>
 					  <option value="2" >选修课</option>
 					</select></div></li>
